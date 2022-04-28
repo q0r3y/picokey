@@ -2,7 +2,7 @@
 // sha1.cpp
 // Copyright (c) 2014,2015 Stephan Brumme. All rights reserved.
 // see http://create.stephan-brumme.com/disclaimer.html
-//
+// https://gist.github.com/kaliatech/427d57cb1a8e9a8815894413be337cf9
 
 #include "sha1.h"
 
