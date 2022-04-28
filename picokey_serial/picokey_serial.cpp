@@ -19,7 +19,7 @@ void printMiddle();
 void printLineEnd(int spaces);
 
 const string VERSION = "2022-04-28";
-vector<string> dbPicokey;
+vector<string> dbPicokeyInfo;
 
 string getSerialInput() {
 	try
@@ -43,7 +43,7 @@ int dbCallback(void* NotUsed, int argc, char** argv, char** azColName) {
 
 	for (int i = 0; i < argc; i++) {
 		//cout << azColName[i] << ": " << argv[i] << endl;
-		dbPicokey.push_back(argv[i]);
+		dbPicokeyInfo.push_back(argv[i]);
 	}
 	return 0;
 }
@@ -61,7 +61,7 @@ void dbRetrieveDeviceData(string& inputDeviceId) {
 	 printLineEnd(8);
 	 sqlite3_exec(db, sql.c_str(), dbCallback, 0, NULL);
 
-	 if (dbPicokey.size() == 0) {
+	 if (dbPicokeyInfo.size() == 0) {
 		 sqlite3_close(db);
 		 throw exception("Device ID not found in database.");
 	 }
@@ -69,21 +69,65 @@ void dbRetrieveDeviceData(string& inputDeviceId) {
 	 sqlite3_close(db);
 }
 
+string calculateOTP(string count) {
+	cout << ":: [*] Calculating SHA1 HMAC...";
+	printLineEnd(18);
+
+	string sha1hmac = hmac<SHA1>(count, dbPicokeyInfo[1]);
+	string sha1hmacShort = sha1hmac.substr(26, 14);
+	cout << ":: [*] SHA1 HMAC Result: ..." << sha1hmacShort;
+	printLineEnd(7);
+
+	string otp = dbPicokeyInfo[0] + sha1hmacShort;
+	cout << ":: [*] Calculated OTP: " << otp;
+	printLineEnd(6);
+
+	return otp;
+}
+
+void attemptOTP(string inputOTP) {
+	int attempt = 1;
+	int currentCount = stoi(dbPicokeyInfo[2]);
+	while (attempt <= 10) {
+		cout << ":: [*] Attempt " << attempt;
+		printLineEnd(33);
+		string calculatedOTP = calculateOTP(to_string(currentCount));
+		if (inputOTP == calculatedOTP) {
+			cout << ":: [+] Input OTP matches Calculated OTP!";
+			printLineEnd(9);
+			cout << ":: [+] Successfully authenticated.";
+			printLineEnd(15);
+			// set database count
+			break;
+		}
+		cout << currentCount;
+		currentCount++;
+		dbPicokeyInfo[2] = to_string(currentCount);
+		attempt++;
+	}
+
+	if (attempt == 10) {
+		cout << ":: [-] Input OTP does not match Calculated OTP!";
+		printLineEnd(20);
+		cout << ":: [-] Unable to authenticate.";
+		printLineEnd(19);
+	}
+}
 
 int main(int argc, char* argv[])
 {
-	string inputData;
+	string inputOTP;
 	string inputDeviceId;
 
 	printHeader();
 
 	try 
 	{
-		inputData = getSerialInput();
+		inputOTP = getSerialInput();
 		//inputData = "486197d7f1a6c30cc051";
-		cout << ":: [*] Device Input: " << inputData;
-		printLineEnd(8);
-		inputDeviceId = inputData.substr(0, 6);
+		cout << ":: [*] Input OTP: " << inputOTP;
+		printLineEnd(11);
+		inputDeviceId = inputOTP.substr(0, 6);
 		cout << ":: [*] Device ID: " << inputDeviceId;
 		printLineEnd(25);
 		dbRetrieveDeviceData(inputDeviceId);
@@ -99,34 +143,7 @@ int main(int argc, char* argv[])
 		return 1;
 	}
 
-	// Computes sha1 hmac and slices off last 14
-	cout << ":: [*] Computing SHA1 HMAC...";
-	printLineEnd(20);
-
-	string sha1hmac = hmac<SHA1>(dbPicokey[1], dbPicokey[2]);
-	string sha1hmacSlice = sha1hmac.substr(26, 14);
-
-	cout << ":: [*] SHA1 HMAC Result (sliced): " << sha1hmacSlice;
-	printLineEnd(1);
-
-	string finalResult = dbPicokey[0] + sha1hmacSlice;
-
-	cout << ":: [*] Final result: " << finalResult;
-	printLineEnd(8);
-
-	if (inputData == finalResult) {
-		cout << ":: [+] Input matches result!";
-		printLineEnd(21);
-		cout << ":: [+] Successfully authenticated.";
-		printLineEnd(15);
-		// set device data
-	}
-	else {
-		cout << ":: [-] Input does not match result!";
-		printLineEnd(20);
-		cout << ":: [-] Unable to authenticate.";
-		printLineEnd(19);
-	}
+	attemptOTP(inputOTP);
 
 	printFooter();
 	return 0;
