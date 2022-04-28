@@ -3,5 +3,4 @@
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
-C:\Users\hahnc\source\repos\picokey_serial\picokey_serial\picokey_serial.cpp(63,16): warning C4101: 'stmt': unreferenced local variable
   picokey_serial.vcxproj -> C:\Users\hahnc\source\repos\picokey_serial\x64\Debug\picokey_serial.exe
