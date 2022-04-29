@@ -13,6 +13,8 @@
 #include "sqlite3.h"
 using namespace std;
 
+const string VERSION = "2022-04-29";
+
 void printHeader();
 void printFooter();
 void printMiddle();
@@ -24,8 +26,6 @@ void setDatabaseCount(string count);
 void dbRetrieveDeviceData(string& inputDeviceId);
 int dbCallback(void* NotUsed, int argc, char** argv, char** azColName);
 
-const string VERSION = "2022-04-29";
-
 struct {
 	string deviceId;
 	string secretKey;
@@ -33,21 +33,26 @@ struct {
 } dbDeviceInfo;
 
 int main(int argc, char* argv[]) {
-	string inputOTP;
-	string inputDeviceId;
 
 	printHeader();
 	try {
-		inputOTP = getSerialInput();
+		string inputOTP = getSerialInput();
+
 		cout << ":: [*] Input OTP: " << inputOTP;
 		printLineEnd(11);
-		inputDeviceId = inputOTP.substr(0, 6);
+
+		string inputDeviceId = inputOTP.substr(0, 6);
+
 		cout << ":: [*] Device ID: " << inputDeviceId;
 		printLineEnd(25);
+
 		dbRetrieveDeviceData(inputDeviceId);
+
 		cout << ":: [+] Device ID found!";
 		printLineEnd(26);
 		printMiddle();
+
+		attemptOTP(inputOTP);
 	}
 	catch (exception& e) {
 		cout << ":: [-] Error: " << e.what();
@@ -55,8 +60,6 @@ int main(int argc, char* argv[]) {
 		printFooter();
 		return 1;
 	}
-
-	attemptOTP(inputOTP);
 
 	printFooter();
 	return 0;
@@ -66,6 +69,7 @@ string getSerialInput() {
 	try {
 		cout << ":: [*] Waiting for serial input..";
 		printLineEnd(16);
+
 		SimpleSerial serial("COM5", 115200);
 		string input = serial.readLine();
 		return input;
@@ -81,10 +85,12 @@ string calculateOTP(string count) {
 
 	string sha1hmac = hmac<SHA1>(count, dbDeviceInfo.secretKey);
 	string sha1hmacShort = sha1hmac.substr(26, 14);
+
 	cout << ":: [*] SHA1 HMAC Result: ..." << sha1hmacShort;
 	printLineEnd(7);
 
 	string otp = dbDeviceInfo.deviceId + sha1hmacShort;
+
 	cout << ":: [*] Calculated OTP: " << otp;
 	printLineEnd(6);
 
@@ -97,24 +103,23 @@ void attemptOTP(string inputOTP) {
 	while (attempt <= 10) {
 		cout << ":: [*] Attempt " << attempt;
 		printLineEnd(33);
+
 		string calculatedOTP = calculateOTP(to_string(currentCount));
 		currentCount++;
 		if (inputOTP == calculatedOTP) {
+
 			cout << ":: [+] Input OTP matches Calculated OTP!";
 			printLineEnd(9);
-			try {
-				cout << ":: [+] Found matching count at: " 
-					<< to_string(currentCount - 1);
-				printLineEnd(16);
-				setDatabaseCount(to_string(currentCount));
-				cout << ":: [+] Successfully authenticated.";
-				printLineEnd(15);
-				// Respond valid
-			}
-			catch (exception& e) {
-				cout << ":: [-] Error: " << e.what();
-				printLineEnd(2);
-			}
+
+			cout << ":: [+] Found matching count at: "
+				<< to_string(currentCount - 1);
+			printLineEnd(16);
+
+			setDatabaseCount(to_string(currentCount));
+
+			cout << ":: [+] Successfully authenticated.";
+			printLineEnd(15);
+
 			break;
 		}
 		attempt++;
@@ -163,6 +168,7 @@ void dbRetrieveDeviceData(string& inputDeviceId) {
 
 	cout << ":: [*] Searching database for Device ID..";
 	printLineEnd(8);
+
 	sqlite3_exec(db, sql.c_str(), dbCallback, 0, NULL);
 
 	if (dbDeviceInfo.deviceId.size() == 0 ||
