@@ -16,115 +16,29 @@ using namespace std;
 void printHeader();
 void printFooter();
 void printMiddle();
+string getSerialInput();
 void printLineEnd(int spaces);
+string calculateOTP(string count);
+void attemptOTP(string inputOTP);
+void setDatabaseCount(string count);
+void dbRetrieveDeviceData(string& inputDeviceId);
+int dbCallback(void* NotUsed, int argc, char** argv, char** azColName);
 
-const string VERSION = "2022-04-28";
-vector<string> dbPicokeyInfo;
+const string VERSION = "2022-04-29";
 
-string getSerialInput() {
-	try
-	{
-		cout << ":: [*] Waiting for serial input.."; 
-		printLineEnd(16);
-		SimpleSerial serial("COM5", 115200);
-		string input = serial.readLine();
-		return input;
-	}
-	catch (exception e)
-	{
-		throw e;
-	}
-}
+struct {
+	string deviceId;
+	string secretKey;
+	string currentCount;
+} dbDeviceInfo;
 
-int dbCallback(void* NotUsed, int argc, char** argv, char** azColName) {
-	// int argc: holds the number of results
-	// (array) azColName: holds each column returned
-	// (array) argv: holds each value
-
-	for (int i = 0; i < argc; i++) {
-		//cout << azColName[i] << ": " << argv[i] << endl;
-		dbPicokeyInfo.push_back(argv[i]);
-	}
-	return 0;
-}
-
-void dbRetrieveDeviceData(string& inputDeviceId) {
-	 //int dbDeviceId;
-	 sqlite3* db;
-	 const string sql = "SELECT * FROM keys WHERE deviceId=" + inputDeviceId + ";";
-
-	 if (sqlite3_open("../data/picokey_db.sqlite3", &db) != SQLITE_OK) {
-		 throw exception("Unable to open database.");
-	 }
-
-	 cout << ":: [*] Searching database for Device ID.."; 
-	 printLineEnd(8);
-	 sqlite3_exec(db, sql.c_str(), dbCallback, 0, NULL);
-
-	 if (dbPicokeyInfo.size() == 0) {
-		 sqlite3_close(db);
-		 throw exception("Device ID not found in database.");
-	 }
-
-	 sqlite3_close(db);
-}
-
-string calculateOTP(string count) {
-	cout << ":: [*] Calculating SHA1 HMAC...";
-	printLineEnd(18);
-
-	string sha1hmac = hmac<SHA1>(count, dbPicokeyInfo[1]);
-	string sha1hmacShort = sha1hmac.substr(26, 14);
-	cout << ":: [*] SHA1 HMAC Result: ..." << sha1hmacShort;
-	printLineEnd(7);
-
-	string otp = dbPicokeyInfo[0] + sha1hmacShort;
-	cout << ":: [*] Calculated OTP: " << otp;
-	printLineEnd(6);
-
-	return otp;
-}
-
-void attemptOTP(string inputOTP) {
-	int attempt = 1;
-	int currentCount = stoi(dbPicokeyInfo[2]);
-	while (attempt <= 10) {
-		cout << ":: [*] Attempt " << attempt;
-		printLineEnd(33);
-		string calculatedOTP = calculateOTP(to_string(currentCount));
-		if (inputOTP == calculatedOTP) {
-			cout << ":: [+] Input OTP matches Calculated OTP!";
-			printLineEnd(9);
-			cout << ":: [+] Successfully authenticated.";
-			printLineEnd(15);
-			// set database count
-			break;
-		}
-		cout << currentCount;
-		currentCount++;
-		dbPicokeyInfo[2] = to_string(currentCount);
-		attempt++;
-	}
-
-	if (attempt == 10) {
-		cout << ":: [-] Input OTP does not match Calculated OTP!";
-		printLineEnd(20);
-		cout << ":: [-] Unable to authenticate.";
-		printLineEnd(19);
-	}
-}
-
-int main(int argc, char* argv[])
-{
+int main(int argc, char* argv[]) {
 	string inputOTP;
 	string inputDeviceId;
 
 	printHeader();
-
-	try 
-	{
+	try {
 		inputOTP = getSerialInput();
-		//inputData = "486197d7f1a6c30cc051";
 		cout << ":: [*] Input OTP: " << inputOTP;
 		printLineEnd(11);
 		inputDeviceId = inputOTP.substr(0, 6);
@@ -135,8 +49,7 @@ int main(int argc, char* argv[])
 		printLineEnd(26);
 		printMiddle();
 	}
-	catch (exception& e)
-	{
+	catch (exception& e) {
 		cout << ":: [-] Error: " << e.what();
 		printLineEnd(3);
 		printFooter();
@@ -146,6 +59,140 @@ int main(int argc, char* argv[])
 	attemptOTP(inputOTP);
 
 	printFooter();
+	return 0;
+}
+
+string getSerialInput() {
+	try {
+		cout << ":: [*] Waiting for serial input..";
+		printLineEnd(16);
+		SimpleSerial serial("COM5", 115200);
+		string input = serial.readLine();
+		return input;
+	}
+	catch (exception e) {
+		throw e;
+	}
+}
+
+string calculateOTP(string count) {
+	cout << ":: [*] Calculating SHA1 HMAC...";
+	printLineEnd(18);
+
+	string sha1hmac = hmac<SHA1>(count, dbDeviceInfo.secretKey);
+	string sha1hmacShort = sha1hmac.substr(26, 14);
+	cout << ":: [*] SHA1 HMAC Result: ..." << sha1hmacShort;
+	printLineEnd(7);
+
+	string otp = dbDeviceInfo.deviceId + sha1hmacShort;
+	cout << ":: [*] Calculated OTP: " << otp;
+	printLineEnd(6);
+
+	return otp;
+}
+
+void attemptOTP(string inputOTP) {
+	int attempt = 1;
+	int currentCount = stoi(dbDeviceInfo.currentCount);
+	while (attempt <= 10) {
+		cout << ":: [*] Attempt " << attempt;
+		printLineEnd(33);
+		string calculatedOTP = calculateOTP(to_string(currentCount));
+		currentCount++;
+		if (inputOTP == calculatedOTP) {
+			cout << ":: [+] Input OTP matches Calculated OTP!";
+			printLineEnd(9);
+			try {
+				cout << ":: [+] Found matching count at: " 
+					<< to_string(currentCount - 1);
+				printLineEnd(16);
+				setDatabaseCount(to_string(currentCount));
+				cout << ":: [+] Successfully authenticated.";
+				printLineEnd(15);
+				// Respond valid
+			}
+			catch (exception& e) {
+				cout << ":: [-] Error: " << e.what();
+				printLineEnd(2);
+			}
+			break;
+		}
+		attempt++;
+	}
+
+	if (attempt > 10) {
+		cout << ":: [-] Input OTP does not match Calculated OTP!";
+		printLineEnd(2);
+		cout << ":: [-] Unable to authenticate.";
+		printLineEnd(19);
+		// Respond invalid
+	}
+}
+
+void setDatabaseCount(string count) {
+	sqlite3* db;
+	char* errMsg = 0;
+	const string sql = "UPDATE keys SET count=" + count + 
+						" WHERE deviceId=" + dbDeviceInfo.deviceId + ";";
+
+	if (sqlite3_open("../data/picokey_db.sqlite3", &db) != SQLITE_OK) {
+		throw exception("Unable to open database.");
+	}
+	cout << ":: [*] Saving new count to database..";
+	printLineEnd(12);
+
+	sqlite3_exec(db, sql.c_str(), NULL, 0, &errMsg);
+
+	if (errMsg) {
+		//cout << errMsg << endl;
+		sqlite3_free(errMsg);
+		throw exception("Unable to save record in database");
+	}
+
+	sqlite3_free(errMsg);
+	sqlite3_close(db);
+}
+
+void dbRetrieveDeviceData(string& inputDeviceId) {
+	sqlite3* db;
+	const string sql = "SELECT * FROM keys WHERE deviceId=" + inputDeviceId + ";";
+
+	if (sqlite3_open("../data/picokey_db.sqlite3", &db) != SQLITE_OK) {
+		throw exception("Unable to open database.");
+	}
+
+	cout << ":: [*] Searching database for Device ID..";
+	printLineEnd(8);
+	sqlite3_exec(db, sql.c_str(), dbCallback, 0, NULL);
+
+	if (dbDeviceInfo.deviceId.size() == 0 ||
+		dbDeviceInfo.secretKey.size() == 0 ||
+		dbDeviceInfo.currentCount.size() == 0) {
+		sqlite3_close(db);
+		throw exception("Device ID not found in database.");
+	}
+
+	sqlite3_close(db);
+}
+
+/*
+* int argc: holds the number of results
+* (array) azColName: holds each column returned
+* (array) argv: holds each value
+*/
+int dbCallback(void* NotUsed, int argc, char** argv, char** azColName) {
+
+	// Is there a name for this process?
+	vector<string*> temp = {
+		&dbDeviceInfo.deviceId,
+		&dbDeviceInfo.secretKey,
+		&dbDeviceInfo.currentCount
+	};
+
+	for (int i = 0; i < argc; i++) {
+		*temp[i] = argv[i];
+	}
+
 	return 0;
 }
 
