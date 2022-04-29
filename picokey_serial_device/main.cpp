@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "pico/stdlib.h"
 #include <hardware/flash.h>
+#include <string>
 
     // Flash-based address of the last sector
 #define FLASH_TARGET_OFFSET (PICO_FLASH_SIZE_BYTES - FLASH_SECTOR_SIZE)
@@ -8,10 +9,8 @@
 // https://www.makermatrix.com/blog/read-and-write-data-with-the-pi-pico-onboard-flash/
 
 int main() {
-
     stdio_init_all();
     sleep_ms(5000);
-
 
     int buf[FLASH_PAGE_SIZE/sizeof(int)];  // One page worth of 32-bit ints
     int mydata = 123456;  // The data I want to store
@@ -31,5 +30,7 @@ int main() {
     p = (int *)addr; // Place an int pointer at our memory-mapped address
     value = *p; // Store the value at this address into a variable for later use
 
-    printf(value);
+    std::string s = std::to_string(value);
+
+    printf(s.c_str());
 }
