@@ -452,6 +452,30 @@ C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\picokey_serial_device.dir\build.make CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.S.obj
 
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+
+# target to build an object file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\picokey_serial_device.dir\build.make CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.obj
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
+
+# target to preprocess a source file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\picokey_serial_device.dir\build.make CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.i
+
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s
+
+# target to generate assembly for a file
+C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\picokey_serial_device.dir\build.make CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+.PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c.s
+
 C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj: C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.c.obj
 .PHONY : C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
 
@@ -1155,6 +1179,9 @@ help:
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_clocks/clocks.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_divider/divider.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.obj
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.i
+	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.s
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.obj
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.i
 	@echo ... C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_gpio/gpio.s

@@ -107,7 +107,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
 					"backtrace" : 2,
@@ -261,7 +261,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"define" : "PICO_CMAKE_BUILD_TYPE=\"Release\""
+					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
 				},
 				{
 					"backtrace" : 2,
@@ -441,6 +441,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/include"
 				}
 			],
 			"language" : "CXX",
@@ -462,7 +466,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
 					"backtrace" : 2,
@@ -600,7 +604,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"define" : "PICO_CMAKE_BUILD_TYPE=\"Release\""
+					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
 				},
 				{
 					"backtrace" : 2,
@@ -780,6 +784,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/include"
 				}
 			],
 			"language" : "C",
@@ -825,14 +833,15 @@
 				39,
 				43,
 				44,
-				45
+				45,
+				46
 			]
 		},
 		{
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG"
+					"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g"
 				},
 				{
 					"backtrace" : 2,
@@ -967,7 +976,7 @@
 				},
 				{
 					"backtrace" : 2,
-					"define" : "PICO_CMAKE_BUILD_TYPE=\"Release\""
+					"define" : "PICO_CMAKE_BUILD_TYPE=\"Debug\""
 				},
 				{
 					"backtrace" : 2,
@@ -1147,6 +1156,10 @@
 				{
 					"backtrace" : 2,
 					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/include"
 				}
 			],
 			"language" : "ASM",
@@ -1183,7 +1196,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-mcpu=cortex-m0plus -mthumb -O3 -DNDEBUG",
+				"fragment" : "-mcpu=cortex-m0plus -mthumb -Og -g",
 				"role" : "flags"
 			},
 			{
@@ -2055,7 +2068,8 @@
 				42,
 				43,
 				44,
-				45
+				45,
+				46
 			]
 		},
 		{
@@ -2352,6 +2366,12 @@
 			"backtrace" : 2,
 			"compileGroupIndex" : 1,
 			"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_uart/stdio_uart.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 2,
+			"compileGroupIndex" : 1,
+			"path" : "C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/flash.c",
 			"sourceGroupIndex" : 0
 		}
 	],
