@@ -1,5 +1,5 @@
-C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/elf2uf2/CMakeFiles/elf2uf2.dir
-C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/elf2uf2/CMakeFiles/edit_cache.dir
-C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/elf2uf2/CMakeFiles/rebuild_cache.dir
-C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
-C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir
+C:/Users/user/source/repos/picokey/picokey_serial_device/build/elf2uf2/CMakeFiles/elf2uf2.dir
+C:/Users/user/source/repos/picokey/picokey_serial_device/build/elf2uf2/CMakeFiles/edit_cache.dir
+C:/Users/user/source/repos/picokey/picokey_serial_device/build/elf2uf2/CMakeFiles/rebuild_cache.dir
+C:/Users/user/source/repos/picokey/picokey_serial_device/build/elf2uf2/boot_uf2_headers/CMakeFiles/edit_cache.dir
+C:/Users/user/source/repos/picokey/picokey_serial_device/build/elf2uf2/boot_uf2_headers/CMakeFiles/rebuild_cache.dir

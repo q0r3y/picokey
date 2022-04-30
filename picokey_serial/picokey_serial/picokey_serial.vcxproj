@@ -80,7 +80,7 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\hahnc\source\repos\picokey_serial\sdk\asio-1.22.1\include;</IncludePath>
+    <IncludePath>$(VC_IncludePath);$(WindowsSDK_IncludePath);C:\Users\user\source\repos\picokey\picokey_serial\sdk\asio-1.22.1\include</IncludePath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>

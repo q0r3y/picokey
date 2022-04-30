@@ -1,4 +1,4 @@
-// Padded and checksummed version of: C:/Users/hahnc/source/repos/picokey_serial/picokey_serial_device/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
+// Padded and checksummed version of: C:/Users/user/source/repos/picokey/picokey_serial_device/build/pico-sdk/src/rp2_common/boot_stage2/bs2_default.bin
 
 .cpu cortex-m0plus
 .thumb

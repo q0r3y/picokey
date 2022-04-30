@@ -70,7 +70,7 @@ string getSerialInput() {
 		cout << ":: [*] Waiting for serial input..";
 		printLineEnd(16);
 
-		SimpleSerial serial("COM5", 115200);
+		SimpleSerial serial("COM17", 115200);
 		string input = serial.readLine();
 		return input;
 	}
