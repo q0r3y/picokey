@@ -124,6 +124,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c.obj.d"
   "CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj"
   "CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/unique_id.c.obj.d"
+  "CMakeFiles/picokey_serial_device.dir/SHA1.cpp.obj"
+  "CMakeFiles/picokey_serial_device.dir/SHA1.cpp.obj.d"
   "CMakeFiles/picokey_serial_device.dir/main.cpp.obj"
   "CMakeFiles/picokey_serial_device.dir/main.cpp.obj.d"
   "picokey_serial_device.elf"

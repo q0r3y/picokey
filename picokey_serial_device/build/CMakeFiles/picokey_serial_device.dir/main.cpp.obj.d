@@ -29,22 +29,16 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\sys\sched.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\machine\types.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\sys\stdio.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\stdlib.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cstdlib \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\c++config.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\os_defines.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\cpu_defines.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\pstl\pstl_config.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\stdlib.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\machine\stdlib.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\alloca.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\std_abs.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_stdlib\include/pico/stdlib.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/types.h \
  C:\VSARM\sdk\pico\pico-sdk\src\common\pico_base\include/pico/assert.h \
  c:\vsarm\armcc\112202~1.02\lib\gcc\arm-none-eabi\11.2.1\include\stdbool.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cassert \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\c++config.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\os_defines.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\arm-none-eabi\thumb\v6-m\nofp\bits\cpu_defines.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\pstl\pstl_config.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\assert.h \
  c:\vsarm\armcc\112202~1.02\lib\gcc\arm-none-eabi\11.2.1\include\stdint.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\stdint.h \
@@ -78,6 +72,7 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\pico_stdio_usb\include/pico/stdio_usb.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_flash\include/hardware/flash.h \
  C:\VSARM\sdk\pico\pico-sdk\src\rp2_common\hardware_sync\include/hardware/sync.h \
+ C:\Users\user\source\repos\picokey\picokey_serial_device\SHA1.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\string \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\stringfwd.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\memoryfwd.h \
@@ -135,9 +130,19 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\hash_bytes.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\string_view.tcc \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\ext\string_conversions.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cstdlib \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\stdlib.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\machine\stdlib.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\alloca.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\std_abs.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cstdio \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cerrno \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\errno.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\sys\errno.h \
  c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\charconv.h \
- c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\basic_string.tcc
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\bits\basic_string.tcc \
+ C:\Users\user\source\repos\picokey\picokey_serial_device\HMAC.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\c++\11.2.1\cstring \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\string.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\strings.h \
+ c:\vsarm\armcc\112202~1.02\arm-none-eabi\include\sys\string.h

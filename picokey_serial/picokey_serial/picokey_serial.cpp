@@ -13,6 +13,7 @@
 #include "sqlite3.h"
 using namespace std;
 
+#define COM_PORT "COM17"
 const string VERSION = "2022-04-29";
 
 void printHeader();
@@ -41,6 +42,7 @@ int main(int argc, char* argv[]) {
 		cout << ":: [*] Input OTP: " << inputOTP;
 		printLineEnd(11);
 
+
 		string inputDeviceId = inputOTP.substr(0, 6);
 
 		cout << ":: [*] Device ID: " << inputDeviceId;
@@ -67,11 +69,13 @@ int main(int argc, char* argv[]) {
 
 string getSerialInput() {
 	try {
-		cout << ":: [*] Waiting for serial input..";
-		printLineEnd(16);
+		string input;
+		cout << ":: [*] Input an OTP code: ";
+		cin >> input;
 
-		SimpleSerial serial("COM17", 115200);
-		string input = serial.readLine();
+		//SimpleSerial serial(COM_PORT, 115200);
+		//string input = serial.readLine();
+		
 		return input;
 	}
 	catch (exception e) {
@@ -113,7 +117,7 @@ void attemptOTP(string inputOTP) {
 
 			cout << ":: [+] Found matching count at: "
 				<< to_string(currentCount - 1);
-			printLineEnd(16);
+			printLineEnd(15);
 
 			setDatabaseCount(to_string(currentCount));
 
@@ -143,8 +147,10 @@ void setDatabaseCount(string count) {
 	if (sqlite3_open("../data/picokey_db.sqlite3", &db) != SQLITE_OK) {
 		throw exception("Unable to open database.");
 	}
-	cout << ":: [*] Saving new count to database..";
-	printLineEnd(12);
+	cout << ":: [*] Saving new count: ";
+	cout << count;
+	cout << " to database..";
+	printLineEnd(8);
 
 	sqlite3_exec(db, sql.c_str(), NULL, 0, &errMsg);
 

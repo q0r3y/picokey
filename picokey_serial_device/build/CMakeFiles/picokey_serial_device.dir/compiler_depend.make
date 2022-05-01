@@ -2760,6 +2760,113 @@ CMakeFiles/picokey_serial_device.dir/C_/VSARM/sdk/pico/pico-sdk/src/rp2_common/p
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/error.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_unique_id/include/pico/unique_id.h
 
+CMakeFiles/picokey_serial_device.dir/SHA1.cpp.obj: ../SHA1.cpp \
+  ../SHA1.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/string \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/pstl/pstl_config.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stringfwd.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/memoryfwd.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/char_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_algobase.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/functexcept.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/exception_defines.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/cpp_type_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/type_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/numeric_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_pair.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/move.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/type_traits \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_iterator_base_types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_iterator_base_funcs.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/concept_check.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/debug/assertions.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_iterator.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/ptr_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/debug/debug.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/predefined_ops.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/postypes.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cwchar \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/wchar.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/_ansi.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/newlib.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/_newlib_version.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/config.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/ieeefp.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/features.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/reent.h \
+  C:/VSARM/armcc/11.2\ 2022.02/lib/gcc/arm-none-eabi/11.2.1/include/stddef.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/_types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/_default_types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/lock.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/cdefs.h \
+  C:/VSARM/armcc/11.2\ 2022.02/lib/gcc/arm-none-eabi/11.2.1/include/stdarg.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_locale.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdint \
+  C:/VSARM/armcc/11.2\ 2022.02/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdint.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_intsup.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_stdint.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/allocator.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++allocator.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/new_allocator.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/new \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/exception.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/localefwd.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++locale.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/clocale \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/locale.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/_ansi.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/iosfwd \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cctype \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/ctype.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/ostream_insert.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/cxxabi_forced.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_function.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/backward/binders.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/range_access.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/initializer_list \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/basic_string.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/atomicity.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/gthr-default.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/atomic_word.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/alloc_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/alloc_traits.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stl_construct.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/string_view \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/functional_hash.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/hash_bytes.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/string_view.tcc \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/string_conversions.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdlib \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdlib.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/stdlib.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/alloca.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/std_abs.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdio \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdio.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/endian.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/_endian.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/select.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_sigset.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_timeval.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/timespec.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_timespec.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/_pthreadtypes.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/sched.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/types.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/stdio.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cerrno \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/errno.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/errno.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/charconv.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/basic_string.tcc
+
 CMakeFiles/picokey_serial_device.dir/main.cpp.obj: ../main.cpp \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdio.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/_ansi.h \
@@ -2790,22 +2897,16 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: ../main.cpp \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/sched.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/types.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/stdio.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/stdlib.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdlib \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/pstl/pstl_config.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdlib.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/stdlib.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/alloca.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/std_abs.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_stdlib/include/pico/stdlib.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/types.h \
   C:/VSARM/sdk/pico/pico-sdk/src/common/pico_base/include/pico/assert.h \
   C:/VSARM/armcc/11.2\ 2022.02/lib/gcc/arm-none-eabi/11.2.1/include/stdbool.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cassert \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/c++config.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/os_defines.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi/thumb/v6-m/nofp/bits/cpu_defines.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/pstl/pstl_config.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/assert.h \
   C:/VSARM/armcc/11.2\ 2022.02/lib/gcc/arm-none-eabi/11.2.1/include/stdint.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdint.h \
@@ -2839,6 +2940,7 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: ../main.cpp \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/include/pico/stdio_usb.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_flash/include/hardware/flash.h \
   C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_sync/include/hardware/sync.h \
+  ../SHA1.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/string \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stringfwd.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/memoryfwd.h \
@@ -2896,12 +2998,22 @@ CMakeFiles/picokey_serial_device.dir/main.cpp.obj: ../main.cpp \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/hash_bytes.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/string_view.tcc \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/ext/string_conversions.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdlib \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/stdlib.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/machine/stdlib.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/alloca.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/std_abs.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstdio \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cerrno \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/errno.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/errno.h \
   C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/charconv.h \
-  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/basic_string.tcc
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/basic_string.tcc \
+  ../HMAC.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstring \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/string.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/strings.h \
+  C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/sys/string.h
 
 
 C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/cpp_type_traits.h:
@@ -3152,6 +3264,8 @@ C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/dcd.h:
 
 C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/dcd_attr.h:
 
+../HMAC.h:
+
 C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/debug/debug.h:
 
 C:/VSARM/sdk/pico/pico-sdk/lib/tinyusb/src/device/usbd_control.c:
@@ -3225,6 +3339,8 @@ C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/pheap.c:
 C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/queue.c:
 
 C:/VSARM/sdk/pico/pico-sdk/src/common/pico_util/include/pico/util/queue.h:
+
+C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cstring:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio/include/pico/stdio/driver.h:
 
@@ -3303,6 +3419,8 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_regs/include/hardware/regs/io_bank0.h:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/hardware_irq/irq.c:
+
+../SHA1.cpp:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2040/hardware_structs/include/hardware/structs/scb.h:
 
@@ -3410,9 +3528,7 @@ C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdio_usb/stdio_usb.c:
 
 C:/VSARM/sdk/pico/pico-sdk/src/rp2_common/pico_stdlib/stdlib.c:
 
-C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/stdlib.h:
-
-../main.cpp:
+../SHA1.h:
 
 C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/stringfwd.h:
 
@@ -3471,3 +3587,5 @@ C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/hash_bytes.h:
 C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/cerrno:
 
 C:/VSARM/armcc/11.2\ 2022.02/arm-none-eabi/include/c++/11.2.1/bits/charconv.h:
+
+../main.cpp:

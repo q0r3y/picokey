@@ -3,4 +3,5 @@
   - add -D_WIN32_WINNT=0x0601 to the compiler command line; or
   - add _WIN32_WINNT=0x0601 to your project's Preprocessor Definitions.
   Assuming _WIN32_WINNT=0x0601 (i.e. Windows 7 target).
+LINK : warning LNK4067: ambiguous entry point; selected 'mainCRTStartup'
   picokey_serial.vcxproj -> C:\Users\user\source\repos\picokey\picokey_serial\x64\Debug\picokey_serial.exe
