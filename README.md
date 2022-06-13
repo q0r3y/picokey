@@ -12,3 +12,5 @@ and device ID.
 ###Flowchart
 
 ![flowchart](picokey_flowchart.jpeg)
+
+The libraries I used for calculating the hashes can be found here: https://github.com/stbrumme/hash-library
