@@ -1,4 +1,4 @@
-#Picokey
+# Picokey
 
 For this project I wanted to recreate a two-factor authentication token similar to a Yubikey.
 The device uses an HMAC based one time password. 
@@ -9,7 +9,7 @@ working by the due date, so for now it prints the output over serial and the out
 input into the "server side" program. The "server" uses SQLITE3 to store the secret key, current count 
 and device ID.
 
-###Flowchart
+### Flowchart
 
 ![flowchart](picokey_flowchart.jpeg)
 
